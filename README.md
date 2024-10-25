@@ -16,4 +16,4 @@
 | Last Modification | 2024-10-25 |
 | Current Version| 1.0 |
 
-Dataset contains, but is not entirely consisted of, data from Croatian Meteorological and Hydrological Service (DHMZ)
+Dataset contains, but is not entirely consisted of, data from the Croatian Meteorological and Hydrological Service (DHMZ)
