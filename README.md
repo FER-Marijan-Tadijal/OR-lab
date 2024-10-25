@@ -9,7 +9,7 @@
 | Creator | Marijan Tadijal |
 | Contact Point | marijan.tadijal@fer.unizg.hr |
 | Period the dataset cover | 2024-10-20 - 2024-10-25 |
-| Spatial coverage | Požeško-slavonska, Croatia|
+| Spatial coverage | Croatia|
 | Update frequency | Irregular |
 | Language | English, Croatian |
 | Date and time format | ISO 8601 |
