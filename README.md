@@ -15,3 +15,5 @@
 | Date and time format | ISO 8601 |
 | Last Modification | 2024-10-25 |
 | Current Version| 1.0 |
+
+Dataset contains, but is not entirely consisted of, data from Croatian Meteorological and Hydrological Service (DHMZ)
