@@ -1,0 +1,1 @@
+docker exec -u postgres mojaBazaSpremnik psql -d ORbaza -c "Copy (SELECT station.*, recording.timestamp, recording.value, recording.interval FROM station JOIN recording ON ID=recording.stationID) To STDOUT (DELIMITER E',', FORMAT CSV, NULL '', ENCODING 'UTF8')" >novi_csv.csv
