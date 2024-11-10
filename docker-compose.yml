@@ -1,11 +1,30 @@
 version: '3.1'
 
 services:
-  mojaBazaSpremnik:
+  frontend:
+    image: 'mtadijalfer/or-labosi:frontendv1'
+    ports:
+      - "3000:3000"
+  backend:
+    image: 'mtadijalfer/or-labosi:backendv1'
+    ports:
+      - "8080:8080"
+    depends_on:
+      PostgreSQL:
+        condition: service_healthy
+    restart: always
+  PostgreSQL:
     image: 'mtadijalfer/or-labosi:v1'
     container_name: mojaBazaSpremnik
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
     ports:
-      - "8435:8432"
+      - "5432:5432"
+    expose:
+      - "5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5

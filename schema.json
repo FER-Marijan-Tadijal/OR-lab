@@ -1,9 +1,9 @@
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "http://example.com/example.json",
+    "$id": "https://github.com/FER-Marijan-Tadijal/OR-lab/blob/main/OR-lab.json",
     "type": "array",
-    "default": [],
-    "title": "Root Schema",
+    "title": "Rain Gauge Data",
+	"description": "Rain Gauge Data collected by station",
     "items": {
         "type": "object",
         "title": "A Schema",
