@@ -1,0 +1,89 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "default": [],
+    "title": "Root Schema",
+    "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+            "id",
+            "name",
+            "latitude",
+            "longitude",
+            "elevation",
+            "datesetup",
+            "isactive",
+            "isautomatic",
+            "recordings"
+        ],
+        "properties": {
+            "id": {
+                "type": "integer",
+                "title": "The id Schema"
+            },
+            "name": {
+                "type": "string",
+                "title": "The name Schema"
+            },
+            "latitude": {
+                "type": "number",
+                "title": "The latitude Schema"
+            },
+            "longitude": {
+                "type": "number",
+                "title": "The longitude Schema"
+            },
+            "elevation": {
+                "type": "integer",
+                "title": "The elevation Schema"
+            },
+            "datesetup": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "title": "The datesetup Schema"
+            },
+            "isactive": {
+                "type": "boolean",
+                "title": "The isactive Schema"
+            },
+            "isautomatic": {
+                "type": "boolean",
+                "title": "The isautomatic Schema"
+            },
+            "recordings": {
+                "type": "array",
+                "title": "The recordings Schema",
+                "items": {
+                    "type": "object",
+                    "title": "A Schema",
+                    "required": [
+                        "timestamp",
+                        "value",
+                        "interval"
+                    ],
+                    "properties": {
+                        "timestamp": {
+                            "type": "string",
+                            "title": "The timestamp Schema"
+                        },
+                        "value": {
+                            "type": [
+                                "number",
+                                "integer"
+                            ],
+                            "title": "The value Schema"
+                        },
+                        "interval": {
+                            "type": "string",
+                            "title": "The interval Schema"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
