@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "datatables.net-buttons-dt": "^3.1.2",
+    "datatables.net-dt": "^2.1.8",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}

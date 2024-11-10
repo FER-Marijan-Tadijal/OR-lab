@@ -1,0 +1,12 @@
+COPY (
+	SELECT json_agg(row_to_json(myRows)) FROM
+		(SELECT station.*, json_agg(json_build_object(
+	'timestamp', recording.timestamp, 'value', recording.value, 'interval', recording.interval
+	)) AS recordings
+	FROM station JOIN recording 
+		ON station.ID = recording.stationID
+	GROUP BY station.id
+			ORDER BY station.id) AS myRows
+) to 'D:\FER\5.sem\OR\OR-lab.json';
+
+COPY (SELECT json_agg(row_to_json(myRows)) FROM (SELECT station.*, json_agg(json_build_object('timestamp', recording.timestamp, 'value', recording.value, 'interval', recording.interval)) AS recordings FROM station JOIN recording ON station.ID = recording.stationID GROUP BY station.id ORDER BY station.id) AS myRows) to 'D:\FER\5.sem\OR\OR-lab.json' (ENCODING 'UTF-8');

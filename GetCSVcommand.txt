@@ -1,0 +1,5 @@
+From index.sql:
+COPY (SELECT station.*, recording.timestamp, recording.value, recording.interval FROM station JOIN recording ON ID=recording.stationID) To 'D:\FER\5.sem\OR\OR-lab.csv' With CSV DELIMITER ',' HEADER;
+
+to psql:
+Copy (SELECT station.*, recording.timestamp, recording.value, recording.interval FROM station JOIN recording ON ID=recording.stationID) To 'D:\FER\5.sem\OR\OR-lab.csv' (DELIMITER E',', FORMAT CSV, NULL '', ENCODING 'UTF8');

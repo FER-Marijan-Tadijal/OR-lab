@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marijan Tadijal">
+    <meta name="title" content="OR-lab">
+    <meta name="description" content="Croatian Rain Gauge Meteorological Data">
+    <title>Frontend</title>
+</head>
+<body>
+    <a href="/OR-lab.csv">Data in CSV</a>
+    <a href="/OR-lab.json">Data in JSON</a>
+    <a href="/datatable.html">Datatable</a>
+
+    <h1 id="kolegij-otvoreno-ra-unarstvo">Kolegij Otvoreno Računarstvo</h1>
+    <p>Repozitorij za laboratorijske vježbe</p>
+    <h2 id="author">Author</h2>
+    <p>Marijan Tadijal</p>
+    <h2 id="dataset-version">Dataset version</h2>
+    <p>1.0</p>
+    <h2 id="dataset-language">Dataset language</h2>
+    <p>English, Croatian</p>
+    <h2 id="publication-date">Publication date</h2>
+    <p>2024-10-26</p>
+    <h2 id="date-format">Date format</h2>
+    <p>ISO 8601</p>
+    <h2 id="spatial-coverage">Spatial coverage</h2>
+    <p>Croatia</p>
+    <h2 id="dataset-period">Dataset period</h2>
+    <p>2024-10-20 - 2024-10-25</p>
+    <h2 id="update-frequency">Update frequency</h2>
+    <p>Irregular</p>
+    <h2 id="contact-point">Contact Point</h2>
+    <p>marijan.tadijal@fer.unizg.hr</p>
+    <h2 id="keywords">Keywords</h2>
+    <p>Rain Gauge Croatia Meteorological</p>
+    <p>Attributes are:<br>INT id - Weather station ID in the database<br>VARCHAR(50) name - Weather station name<br>DOUBLE latitude - Weather station latitude<br>DOUBLE longitude - Weather station longitude<br>INT elevation - Weather station elevation (height from sea level)<br>TIMESTAMP dateSetUp - Date at which the weather station was set up<br>BOOLEAN isActive - Is the weather station still active (or is it inactive)?<br>BOOLEAN isAutomatic - Is weather station data updated remotely (or manually)?<br>RECORDING recordings - Array of recordings  </p>
+    <p>RECORDING consists of:<br>TIMESTAMP timestamp - Timestamp at which measurement was taken<br>DOUBLE value - Rainfall in millimetres<br>INTERVAL interval - Interval length during which rainfall was collected. That is, the rainfall was collected during the period [Timestamp - interval, timestamp]  </p>
+    <p>Dataset contains, but is not entirely consisted of, data from the Croatian Meteorological and Hydrological Service (DHMZ)</p>
+
+</body>
+</html>
