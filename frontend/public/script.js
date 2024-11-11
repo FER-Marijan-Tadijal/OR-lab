@@ -1,3 +1,5 @@
+$('form').submit(false);
+
 $('#tablica').DataTable( {
     ajax: 'http://localhost:8080/data',
     layout: {

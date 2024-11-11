@@ -12,7 +12,6 @@ services:
     depends_on:
       PostgreSQL:
         condition: service_healthy
-    restart: always
   PostgreSQL:
     image: 'mtadijalfer/or-labosi:v1'
     container_name: mojaBazaSpremnik

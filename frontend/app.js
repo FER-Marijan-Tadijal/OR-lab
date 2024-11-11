@@ -9,8 +9,8 @@ app.get('/', (req, res) => {
 })
 */
 
-//app.use(express.static('public'))
-app.use('/', express.static(path.join(__dirname, '../../lab2')))
+app.use(express.static('public'))
+//app.use('/', express.static(path.join(__dirname, '../../lab2')))
 
 
 

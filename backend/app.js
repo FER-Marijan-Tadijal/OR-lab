@@ -3,7 +3,7 @@ var cors = require('cors')
 const app = express()
 const port = 8080
 const pgp = require('pg-promise')(/* options */)
-const db = pgp('postgres://postgres:password@localhost:5432/ORbaza')
+const db = pgp('postgres://postgres:password@host.docker.internal:5432/ORbaza')
 
 app.use(cors())
 
