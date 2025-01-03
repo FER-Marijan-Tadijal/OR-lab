@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:3000"
   backend:
-    image: 'mtadijalfer/or-labosi:backendv1'
+    image: 'mtadijalfer/or-labosi:backendv2'
     ports:
       - "8080:8080"
     depends_on:

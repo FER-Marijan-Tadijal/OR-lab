@@ -12,8 +12,6 @@ app.get('/', (req, res) => {
 app.use(express.static('public'))
 //app.use('/', express.static(path.join(__dirname, '../../lab2')))
 
-
-
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
