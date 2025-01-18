@@ -5,8 +5,10 @@ services:
     image: 'mtadijalfer/or-labosi:frontendv1'
     ports:
       - "3000:3000"
+    depends_on:
+      - backend
   backend:
-    image: 'mtadijalfer/or-labosi:backendv2'
+    image: 'mtadijalfer/or-labosi:backendv1'
     ports:
       - "8080:8080"
     depends_on:

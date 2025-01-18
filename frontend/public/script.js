@@ -1,7 +1,7 @@
 $('form').submit(false);
 
 $('#tablica').DataTable( {
-    ajax: 'http://localhost:8080/data',
+    ajax: 'http://localhost:8080/oldData',
     layout: {
         topStart: {
             buttons: [

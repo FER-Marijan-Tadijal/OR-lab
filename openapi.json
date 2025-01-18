@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Swagger Petstore - OpenAPI 3.0",
+    "title": "Meteorological Rain Gauge Data - OpenAPI 3.0",
     "description": "This is a meteorological rain gauge data Server based on the OpenAPI 3.0 specification.",
     "contact": {
       "email": "mt55003@fer.hr"
@@ -117,7 +117,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Station"
+                "$ref": "#/components/schemas/StationCreate"
               }
             }
           }
@@ -252,7 +252,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Station"
+                "$ref": "#/components/schemas/StationCreate"
               }
             }
           },
@@ -313,7 +313,7 @@
   },
   "components": {
     "schemas": {
-      "Station": {
+      "StationCreate": {
         "type": "object",
         "properties": {
           "id": {
@@ -347,6 +347,76 @@
           },
           "isautomatic": {
             "type": "boolean"
+          }
+        }
+      },
+      "Station": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string",
+            "example": "https://schema.org"
+          },
+          "@type": {
+            "type": "string",
+            "example": "Place"
+          },
+          "identifier": {
+            "type": "integer",
+            "format": "int32",
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of meteorological station",
+            "example": "OPG1"
+          },
+          "geo": {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number",
+                "format": "double"
+              },
+              "longitude": {
+                "type": "number",
+                "format": "double"
+              },
+              "elevation": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          },
+          "additionalProperty": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "value": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    {
+                      "type": "boolean"
+                    }
+                  ]
+                }
+              }
+            },
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            }
           }
         },
         "xml": {

@@ -120,6 +120,7 @@ ALTER TABLE ONLY public.station
 ALTER TABLE ONLY public.recording
     ADD CONSTRAINT recording_stationid_fkey FOREIGN KEY (stationid) REFERENCES public.station(id);
 
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO user;
 
 -- Completed on 2024-10-25 22:35:50
 

@@ -13,6 +13,14 @@
     <a href="/OR-lab.json">Data in JSON</a>
     <a href="/datatable.html">Datatable</a>
 
+    <% if (signedIn) { %>
+        <a href="/profile">Korisnički profil</a>
+        <a href="/logout">Odjava</a>
+        <a href="/refresh">Osvježi preslike</a>
+    <% } else {%>
+        <a href="/login">Prijava</a>
+    <% } %>
+
     <h1 id="kolegij-otvoreno-ra-unarstvo">Kolegij Otvoreno Računarstvo</h1>
     <p>Repozitorij za laboratorijske vježbe</p>
     <h2 id="author">Author</h2>
